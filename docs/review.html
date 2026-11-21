@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blind hand-check: LLM vs keyword baseline</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1c1c1a;--mute:#6b6b66;--line:#e4e4df;--ok:#0b6e4f;--bad:#b42318}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1000px;margin:auto;padding:24px 20px 80px}
+h1{margin:0 0 4px;font-size:24px}.sub{color:var(--mute);font-size:14px;margin-bottom:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:14px}
+summary{cursor:pointer;font-weight:600}details li{margin:3px 0}
+.score{position:sticky;top:0;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);z-index:2}
+table{border-collapse:collapse;font-size:14px;margin-top:6px}td,th{padding:4px 12px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--mute);font-weight:500}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button{font:inherit;border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+.item.done{border-left:4px solid var(--ok)}
+.item a{font-weight:600;color:var(--ink)}.meta{color:var(--mute);font-size:13px;margin:2px 0 8px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+select,input{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:8px}
+.sys{font-size:13px;margin-top:8px;color:var(--mute)}.y{color:var(--ok);font-weight:600}.n{color:var(--bad);font-weight:600}
+.num{color:var(--mute);font-size:12px}
+</style>
+</head>
+<body><div class="wrap">
+<h1>Blind hand-check: LLM vs keyword baseline</h1>
+<div class="sub">
+  <p>These are 50 posts drawn at random (seed 42) from the LLM-tagged set. For each post, open the original listing and choose the correct <b>role</b> and <b>city</b> yourself. Neither system's tags are shown while you label, so they can't influence you.</p>
+  <p>When all 50 are labeled, the page scores both the LLM and the keyword baseline against your labels. Labels are saved in this browser. When you're done, click <b>Download results</b> and commit the file as <code>eval/hand_check.json</code>.</p>
+</div>
+
+<details open><summary>Labeling rules (decided before labeling)</summary>
+<ul>
+<li><b>Role = what the person will spend most of their time doing</b>, read from the listing's responsibilities, not from the job title or the company's industry.</li>
+<li><b>Sales &amp; Business Development:</b> the job is selling, i.e. lead generation, calling, closing, field sales, relationship manager or pre-sales. This applies even when the title says "Marketing" but the duties are selling.</li>
+<li><b>Marketing &amp; Content:</b> campaigns, SEO, social media, content writing, branding, video or graphics for marketing.</li>
+<li><b>Operations &amp; Customer Support:</b> coordination, admin, back office, customer service, onboarding, personal or executive assistant.</li>
+<li><b>Software Engineering:</b> building software, including web, app, backend, full-stack and SDE roles. <b>Data Science &amp; AI/ML:</b> data analysis, ML, AI, BI and analytics. <b>DevOps, Cloud &amp; IT:</b> infrastructure, IT support and security.</li>
+<li><b>Product &amp; Design:</b> product manager and UI/UX roles. Graphic design only counts here when it is product design; otherwise it is Marketing.</li>
+<li>Use <b>Other</b> only when no category fits. If a role genuinely splits 50/50, pick the one the responsibilities list first.</li>
+<li><b>City</b> is the primary work location on the listing:
+  <ul>
+    <li>Use the standard spelling (Bengaluru, Gurugram, Delhi).</li>
+    <li>"Work from home" or remote means <b>Remote</b>.</li>
+    <li>Several cities with no main one means <b>Multiple</b>.</li>
+    <li>Only the country given means <b>India</b>.</li>
+  </ul></li>
+</ul></details>
+
+<div class="score" id="score"></div>
+<div id="list"></div>
+</div>
+<datalist id="cities"><option>Bengaluru<option>Mumbai<option>Delhi<option>Gurugram<option>Noida<option>Pune<option>Hyderabad<option>Chennai<option>Kolkata<option>Ahmedabad<option>Jaipur<option>Kochi<option>Chandigarh<option>Indore<option>Navi Mumbai<option>Remote<option>Multiple<option>India</datalist>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ROLES=["Software Engineering","Data Science & AI/ML","DevOps, Cloud & IT","QA & Testing","Product & Design","Sales & Business Development","Marketing & Content","Operations & Customer Support","Finance & Accounting","HR & Recruiting","Core Engineering","Other"];
+const ALIAS={bangalore:'bengaluru',gurgaon:'gurugram','new delhi':'delhi',bombay:'mumbai',cochin:'kochi','work from home':'remote',wfh:'remote',calcutta:'kolkata',madras:'chennai'};
+const nc=c=>{c=String(c||'').trim().toLowerCase();return ALIAS[c]||c};
+const KEY='fji_blind_v2';let S={},P=[],META={},REVEAL=false;
+try{S=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){S={}}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const done=p=>S[p.id]?.role&&S[p.id]?.city;
+function set(id,f,v){S[id]=S[id]||{};S[id][f]=v;save();score();const el=document.querySelector(`[data-id="${CSS.escape(id)}"]`);if(el)el.classList.toggle('done',!!done({id}));}
+function acc(rows,pred){const k=rows.filter(pred).length;return [k,rows.length]}
+function pct([k,n]){return n?`${(100*k/n).toFixed(1)}% <span class="num">(${k}/${n})</span>`:'–'}
+function score(){
+  const D=P.filter(done),all=D.length===P.length;
+  const L=p=>S[p.id];
+  let h=`<div class="bar"><b>${D.length}/${P.length}</b> labeled <button onclick="dl()">Download results</button>
+    <label><input type="checkbox" ${REVEAL?'checked':''} ${all?'':'disabled'} onchange="REVEAL=this.checked;draw()"> show system tags</label>
+    ${all?'':'<span class="num">Scores and system tags unlock once all posts are labeled.</span>'}</div>`;
+  if(all){
+    h+=`<table><tr><th></th><th>Role</th><th>City</th><th>Both</th></tr>
+    <tr><td><b>LLM</b> (${esc(META.model)})</td><td>${pct(acc(D,p=>p.role===L(p).role))}</td><td>${pct(acc(D,p=>nc(p.city)===nc(L(p).city)))}</td><td>${pct(acc(D,p=>p.role===L(p).role&&nc(p.city)===nc(L(p).city)))}</td></tr>
+    <tr><td><b>Keyword baseline</b></td><td>${pct(acc(D,p=>p.rule_role===L(p).role))}</td><td>${pct(acc(D,p=>nc(p.rule_city)===nc(L(p).city)))}</td><td>${pct(acc(D,p=>p.rule_role===L(p).role&&nc(p.rule_city)===nc(L(p).city)))}</td></tr></table>`;
+  }
+  $('score').innerHTML=h;
+}
+function draw(){
+  $('list').innerHTML=P.map((p,i)=>{const s=S[p.id]||{};
+    const sys=REVEAL?`<div class="sys">LLM: <span class="${p.role===s.role?'y':'n'}">${esc(p.role)}</span> / <span class="${nc(p.city)===nc(s.city)?'y':'n'}">${esc(p.city)}</span>
+      &nbsp;·&nbsp; Baseline: <span class="${p.rule_role===s.role?'y':'n'}">${esc(p.rule_role)}</span> / <span class="${nc(p.rule_city)===nc(s.city)?'y':'n'}">${esc(p.rule_city)}</span></div>`:'';
+    return `<div class="item ${done(p)?'done':''}" data-id="${esc(p.id)}"><span class="num">#${i+1}</span> <a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>
+      <div class="meta">${esc(p.company)} · location on listing: <b>${esc(p.location_raw||'—')}</b> · ${esc(p.type)} · ${esc(p.source)}${p.skills?.length?' · '+esc(p.skills.join(', ')):''}</div>
+      <div class="row">Role <select onchange="set('${esc(p.id)}','role',this.value)"><option value="">choose…</option>${ROLES.map(r=>`<option ${s.role===r?'selected':''}>${r}</option>`).join('')}</select>
+      City <input list="cities" value="${esc(s.city||'')}" placeholder="type or pick" onchange="set('${esc(p.id)}','city',this.value.trim())">
+      <input placeholder="note (optional)" value="${esc(s.note||'')}" onchange="set('${esc(p.id)}','note',this.value)" style="flex:1;min-width:160px"></div>${sys}</div>`}).join('');
+  score();
+}
+function dl(){
+  const rows=P.map(p=>({id:p.id,title:p.title,company:p.company,location_raw:p.location_raw,url:p.url,
+    label_role:S[p.id]?.role||null,label_city:S[p.id]?.city||null,note:S[p.id]?.note||'',
+    llm_role:p.role,llm_city:p.city,rule_role:p.rule_role,rule_city:p.rule_city}));
+  const blob=new Blob([JSON.stringify({method:'blind',model:META.model,drawn:META.drawn,seed:META.seed,checked_at:new Date().toISOString(),rows},null,1)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='hand_check.json';a.click();
+}
+fetch('data/eval_sample.json').then(r=>r.json()).then(d=>{P=d.posts;META=d;draw()});
+</script>
+</body>
+</html>

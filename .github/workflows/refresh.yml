@@ -1,0 +1,60 @@
+name: Daily refresh
+
+on:
+  schedule:
+    - cron: "30 2 * * *"      # 08:00 IST every day
+  workflow_dispatch:
+    inputs:
+      sample_eval:
+        description: "Redraw the 50-post hand-check sample"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      - run: python -m pytest -q
+      - name: Collect, dedupe, tag
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: |
+          [ -z "$LLM_BASE_URL" ] && unset LLM_BASE_URL
+          [ -z "$LLM_MODEL" ] && unset LLM_MODEL
+          python -m scraper.run ${{ inputs.sample_eval && '--sample-eval' || '' }}
+      - name: Commit data (GitHub Pages redeploys from /docs)
+        run: |
+          git config user.name "fresher-jobs-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data state
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "data: daily refresh $(date -u +%F)"
+          git push
+      - name: Health check (fails the run -> GitHub emails the repo owner)
+        run: |
+          python - <<'PY'
+          import json, sys
+          s = json.load(open("docs/data/stats.json"))
+          down = [k for k, v in s["source_health"].items() if v["status"] == "down"]
+          print("live posts:", s["live_posts"], "| sources down:", down or "none")
+          if s["live_posts"] < 200:
+              sys.exit(f"::error::Only {s['live_posts']} live posts (< 200)")
+          if "internshala" in down:
+              sys.exit("::error::Primary source internshala returned 0 posts")
+          PY

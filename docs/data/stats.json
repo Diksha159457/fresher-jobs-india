@@ -1,0 +1,227 @@
+{
+ "run_at": "2026-11-21T18:45:03+00:00",
+ "first_run": false,
+ "raw_by_source": {
+  "internshala": 420,
+  "greenhouse": 15,
+  "lever": 14,
+  "ashby": 2
+ },
+ "source_health": {
+  "internshala": {
+   "posts": 420,
+   "endpoints_ok": 9,
+   "endpoints_failed": 0,
+   "failed": {},
+   "status": "ok"
+  },
+  "greenhouse": {
+   "posts": 15,
+   "endpoints_ok": 28,
+   "endpoints_failed": 0,
+   "failed": {},
+   "status": "ok"
+  },
+  "lever": {
+   "posts": 14,
+   "endpoints_ok": 8,
+   "endpoints_failed": 1,
+   "failed": {
+    "upstox": "404"
+   },
+   "status": "ok"
+  },
+  "ashby": {
+   "posts": 2,
+   "endpoints_ok": 3,
+   "endpoints_failed": 1,
+   "failed": {
+    "rocketlane": "404"
+   },
+   "status": "ok"
+  }
+ },
+ "dedupe": {
+  "input": 451,
+  "dup_same_id": 21,
+  "dup_exact_key": 6,
+  "dup_fuzzy": 2,
+  "output": 422,
+  "removed": 29,
+  "examples": {
+   "exact_key": [
+    {
+     "kept": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)",
+     "dropped": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)"
+    },
+    {
+     "kept": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)",
+     "dropped": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)"
+    },
+    {
+     "kept": "Full Stack Development | OST Placement Search Private Limited | Work from home (internshala)",
+     "dropped": "Full Stack Development | OST Placement Search Private Limited | Work from home (internshala)"
+    },
+    {
+     "kept": "Course Developer( Android Development With Kotlin) | SelfCode Academy | Work from home (internshala)",
+     "dropped": "Course Developer(Wordpress 7.1) | SelfCode Academy | Work from home (internshala)"
+    },
+    {
+     "kept": "Social Media Manager | Trading Fox Private Limited | Jaipur (internshala)",
+     "dropped": "Social Media Manager | Trading Fox Private Limited | Jaipur (internshala)"
+    },
+    {
+     "kept": "Software Engineer (CPD) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)",
+     "dropped": "Software Engineer - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)"
+    }
+   ],
+   "fuzzy": [
+    {
+     "kept": "Marketing Excecutive | Sherlocks Life | Kolkata (internshala)",
+     "dropped": "Marketing Executive | Sherlocks Life | Kolkata (internshala)",
+     "similarity": 97.4
+    },
+    {
+     "kept": "Live Streamer | Trading Fox Private Limited | Jaipur (internshala)",
+     "dropped": "Live Streamers | Trading Fox Private Limited | Jaipur (internshala)",
+     "similarity": 96.3
+    }
+   ]
+  }
+ },
+ "live_posts": 422,
+ "new_today": 162,
+ "by_role": [
+  [
+   "Software Engineering",
+   90
+  ],
+  [
+   "Sales & Business Development",
+   88
+  ],
+  [
+   "Marketing & Content",
+   82
+  ],
+  [
+   "Operations & Customer Support",
+   59
+  ],
+  [
+   "Data Science & AI/ML",
+   32
+  ],
+  [
+   "Finance & Accounting",
+   17
+  ],
+  [
+   "DevOps, Cloud & IT",
+   15
+  ],
+  [
+   "HR & Recruiting",
+   13
+  ],
+  [
+   "Product & Design",
+   13
+  ],
+  [
+   "QA & Testing",
+   8
+  ],
+  [
+   "Core Engineering",
+   4
+  ],
+  [
+   "Other",
+   1
+  ]
+ ],
+ "by_city": [
+  [
+   "Remote",
+   108
+  ],
+  [
+   "Mumbai",
+   71
+  ],
+  [
+   "Bengaluru",
+   37
+  ],
+  [
+   "Jaipur",
+   33
+  ],
+  [
+   "Multiple",
+   29
+  ],
+  [
+   "Pune",
+   19
+  ],
+  [
+   "Delhi",
+   17
+  ],
+  [
+   "Noida",
+   14
+  ],
+  [
+   "Hyderabad",
+   14
+  ],
+  [
+   "Chennai",
+   9
+  ],
+  [
+   "Gurugram",
+   8
+  ],
+  [
+   "Ahmedabad",
+   7
+  ],
+  [
+   "Bhopal",
+   6
+  ],
+  [
+   "Kolkata",
+   6
+  ],
+  [
+   "Lucknow",
+   5
+  ]
+ ],
+ "llm": {
+  "model": "gemini-3.1-flash-lite",
+  "requests": 8,
+  "posts_tagged": 146,
+  "prompt_tokens": 12795,
+  "completion_tokens": 3956,
+  "price_per_m_in_out_usd": [
+   0.25,
+   1.5
+  ],
+  "cost_usd": 0.009133,
+  "cost_per_1000_posts_usd": 0.0626
+ },
+ "llm_totals": {
+  "prompt_tokens": 48871,
+  "completion_tokens": 14170,
+  "posts_tagged": 568,
+  "cost_usd": 0.033474,
+  "cost_per_1000_posts_usd": 0.0589,
+  "model": "gemini-3.1-flash-lite"
+ }
+}

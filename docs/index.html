@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fresher Jobs India: daily, deduplicated, LLM-tagged</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1c1c1a;--mute:#6b6b66;--line:#e4e4df;--acc:#0b6e4f;--chip:#eef4f1}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:28px 20px 8px;max-width:1100px;margin:auto}
+h1{margin:0 0 4px;font-size:26px;letter-spacing:-.01em}
+.sub{color:var(--mute);font-size:14px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 4px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
+.stat b{display:block;font-size:20px}.stat span{color:var(--mute);font-size:12px}
+.bar{position:sticky;top:0;background:var(--bg);z-index:2;padding:10px 20px;border-bottom:1px solid var(--line)}
+.bar .in{max-width:1100px;margin:auto;display:flex;gap:8px;flex-wrap:wrap}
+input,select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+input{flex:1;min-width:200px}
+main{max-width:1100px;margin:auto;padding:14px 20px 60px}
+.count{color:var(--mute);font-size:13px;margin-bottom:8px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:1fr auto;gap:4px 12px}
+.job a{color:var(--ink);font-weight:600;text-decoration:none}.job a:hover{color:var(--acc);text-decoration:underline}
+.meta{color:var(--mute);font-size:13px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-items:start}
+.chip{background:var(--chip);color:var(--acc);border-radius:99px;padding:2px 9px;font-size:12px;white-space:nowrap}
+.chip.city{background:#f1eef7;color:#5b3f8c}.chip.src{background:#f3f3f0;color:var(--mute)}
+.health{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 2px;font-size:12px}
+.h{border-radius:99px;padding:2px 9px;background:#ecf6f0;color:#0b6e4f}.h.down{background:#fdecea;color:#b42318;font-weight:600}
+.alert{background:#fdecea;color:#b42318;border:1px solid #f5c2bd;border-radius:10px;padding:8px 12px;margin-top:10px;font-size:13px}
+.chip.warn{background:#fff4e5;color:#b54708}
+.new{color:#b54708;font-size:11px;font-weight:600;margin-left:6px}
+footer{color:var(--mute);font-size:12px;text-align:center;padding:20px}
+footer a{color:var(--mute)}
+@media(max-width:640px){.job{grid-template-columns:1fr}.tags{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Fresher Jobs India</h1>
+  <div class="sub">Fresher job and internship posts in India collected from public sources, deduplicated, and tagged by role and city with an LLM. Refreshed every day at 08:00 IST.</div>
+  <div class="stats" id="stats"></div>
+  <div class="health" id="health"></div>
+  <div id="alert"></div>
+</header>
+<div class="bar"><div class="in">
+  <input id="q" placeholder="Search title, company, skill…">
+  <select id="role"><option value="">All roles</option></select>
+  <select id="city"><option value="">All cities</option></select>
+  <select id="type"><option value="">Jobs + internships</option><option value="job">Jobs</option><option value="internship">Internships</option></select>
+  <select id="source"><option value="">All sources</option></select>
+  <select id="fresh"><option value="">Any date</option><option value="new">New in last run</option><option value="7">Posted ≤ 7 days</option></select>
+</div></div>
+<main><div class="count" id="count"></div><div id="list"></div></main>
+<footer>Sources: Internshala listing pages and public Greenhouse / Lever / Ashby job boards. Every post links to the original.
+ · <a href="review.html">Tagging accuracy check</a> · <a href="data/stats.json">Run stats</a> · <a href="https://github.com/Diksha159457/fresher-jobs-india">Code</a></footer>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let JOBS=[],LATEST='',FIRST=false;
+const daysAgo=d=>d?(Date.now()-new Date(d+'T00:00:00+05:30'))/864e5:1e9;
+const fmt=d=>new Date(d+'T00:00:00+05:30').toLocaleDateString('en-IN',{day:'numeric',month:'short'});
+function fill(sel,vals){const counts={};vals.forEach(v=>counts[v]=(counts[v]||0)+1);
+  Object.entries(counts).sort((a,b)=>b[1]-a[1]).forEach(([v,n])=>{const o=document.createElement('option');o.value=v;o.textContent=`${v} (${n})`;sel.appendChild(o)})}
+function render(){
+  const q=$('q').value.toLowerCase(),r=$('role').value,c=$('city').value,t=$('type').value,s=$('source').value,f=$('fresh').value;
+  const rows=JOBS.filter(j=>(!r||j.role===r)&&(!c||j.city===c)&&(!t||j.type===t)&&(!s||j.source===s)&&
+    (!f||(f==='new'?(!FIRST&&j.first_seen===LATEST):daysAgo(j.posted_date)<=7))&&
+    (!q||(j.title+' '+j.company+' '+(j.skills||[]).join(' ')+' '+j.location_raw).toLowerCase().includes(q)));
+  $('count').textContent=`${rows.length} of ${JOBS.length} posts`;
+  $('list').innerHTML=rows.slice(0,600).map(j=>`<div class="job"><div>
+    <a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>${!FIRST&&j.first_seen===LATEST?'<span class="new">NEW</span>':''}
+    <div class="meta">${esc(j.company)} · ${esc(j.location_raw||'—')} · ${j.type==='internship'?'Internship':'Job'}${j.posted_date?' · posted '+fmt(j.posted_date):(j.posted?' · '+esc(j.posted):'')}</div></div>
+    <div class="tags"><span class="chip">${esc(j.role)}</span><span class="chip city">${esc(j.city)}</span><span class="chip src">${esc(j.source)}</span>${j.gender_restricted?'<span class="chip warn" title="Title restricts applicants by gender">gender-specific</span>':''}</div></div>`).join('');
+}
+Promise.all([fetch('data/jobs.json').then(r=>r.json()),fetch('data/stats.json').then(r=>r.json()).catch(()=>null)]).then(([d,st])=>{
+  JOBS=d.jobs;LATEST=d.updated;FIRST=!!d.first_run;
+  fill($('role'),JOBS.map(j=>j.role));fill($('city'),JOBS.map(j=>j.city));fill($('source'),JOBS.map(j=>j.source));
+  const upd=new Date(d.updated).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'});
+  const s=[[d.count,'live posts'],[FIRST?'first run':(st?.new_today??'–'),'new in last run'],[st?.dedupe?.removed??'–','duplicates removed'],
+    [st?.llm_totals?.cost_per_1000_posts_usd!=null?'$'+st.llm_totals.cost_per_1000_posts_usd:'–','LLM cost / 1,000 posts'],[upd+' IST','last refresh']];
+  $('stats').innerHTML=s.map(([b,l])=>`<div class="stat"><b>${esc(b)}</b><span>${l}</span></div>`).join('');
+  const H=st?.source_health||{};
+  $('health').innerHTML='Sources: '+Object.entries(H).map(([n,h])=>`<span class="h ${h.status==='down'?'down':''}" title="${h.endpoints_ok} endpoints ok, ${h.endpoints_failed} failed">${esc(n)} · ${h.status==='down'?'DOWN':h.posts+' raw'}</span>`).join('');
+  const down=Object.entries(H).filter(([n,h])=>h.status==='down').map(([n])=>n);
+  if(down.length)$('alert').innerHTML=`<div class="alert">⚠ ${down.map(esc).join(', ')} returned no posts in the last run. Showing the remaining sources.</div>`;
+  render();
+});
+['q','role','city','type','source','fresh'].forEach(id=>$(id).addEventListener('input',render));
+</script>
+</body>
+</html>
