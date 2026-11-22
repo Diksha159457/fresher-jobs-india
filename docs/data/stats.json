@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-21T18:45:03+00:00",
+ "run_at": "2026-11-22T10:09:16+00:00",
  "first_run": false,
  "raw_by_source": {
   "internshala": 420,
@@ -43,11 +43,11 @@
  },
  "dedupe": {
   "input": 451,
-  "dup_same_id": 21,
+  "dup_same_id": 19,
   "dup_exact_key": 6,
-  "dup_fuzzy": 2,
-  "output": 422,
-  "removed": 29,
+  "dup_fuzzy": 3,
+  "output": 423,
+  "removed": 28,
   "examples": {
    "exact_key": [
     {
@@ -82,6 +82,11 @@
      "similarity": 97.4
     },
     {
+     "kept": "Pre Sales Management Trainee | BNM Business Solutions LLP | Bangalore, Hosuru (internshala)",
+     "dropped": "Sales Management Trainee | BNM Business Solutions LLP | Bangalore (internshala)",
+     "similarity": 92.3
+    },
+    {
      "kept": "Live Streamer | Trading Fox Private Limited | Jaipur (internshala)",
      "dropped": "Live Streamers | Trading Fox Private Limited | Jaipur (internshala)",
      "similarity": 96.3
@@ -89,32 +94,32 @@
    ]
   }
  },
- "live_posts": 422,
- "new_today": 162,
+ "live_posts": 423,
+ "new_today": 32,
  "by_role": [
   [
-   "Software Engineering",
-   90
+   "Sales & Business Development",
+   92
   ],
   [
-   "Sales & Business Development",
-   88
+   "Software Engineering",
+   86
   ],
   [
    "Marketing & Content",
-   82
+   77
   ],
   [
    "Operations & Customer Support",
-   59
+   55
   ],
   [
    "Data Science & AI/ML",
-   32
+   37
   ],
   [
    "Finance & Accounting",
-   17
+   19
   ],
   [
    "DevOps, Cloud & IT",
@@ -130,7 +135,7 @@
   ],
   [
    "QA & Testing",
-   8
+   11
   ],
   [
    "Core Engineering",
@@ -144,11 +149,11 @@
  "by_city": [
   [
    "Remote",
-   108
+   112
   ],
   [
    "Mumbai",
-   71
+   70
   ],
   [
    "Bengaluru",
@@ -156,19 +161,19 @@
   ],
   [
    "Jaipur",
-   33
+   32
   ],
   [
    "Multiple",
-   29
+   28
   ],
   [
    "Pune",
-   19
+   20
   ],
   [
    "Delhi",
-   17
+   14
   ],
   [
    "Noida",
@@ -176,15 +181,15 @@
   ],
   [
    "Hyderabad",
-   14
-  ],
-  [
-   "Chennai",
-   9
+   13
   ],
   [
    "Gurugram",
-   8
+   10
+  ],
+  [
+   "Chennai",
+   10
   ],
   [
    "Ahmedabad",
@@ -199,29 +204,29 @@
    6
   ],
   [
-   "Lucknow",
+   "Indore",
    5
   ]
  ],
  "llm": {
   "model": "gemini-3.1-flash-lite",
-  "requests": 8,
-  "posts_tagged": 146,
-  "prompt_tokens": 12795,
-  "completion_tokens": 3956,
+  "requests": 2,
+  "posts_tagged": 29,
+  "prompt_tokens": 2589,
+  "completion_tokens": 806,
   "price_per_m_in_out_usd": [
    0.25,
    1.5
   ],
-  "cost_usd": 0.009133,
-  "cost_per_1000_posts_usd": 0.0626
+  "cost_usd": 0.001856,
+  "cost_per_1000_posts_usd": 0.064
  },
  "llm_totals": {
-  "prompt_tokens": 48871,
-  "completion_tokens": 14170,
-  "posts_tagged": 568,
-  "cost_usd": 0.033474,
-  "cost_per_1000_posts_usd": 0.0589,
+  "prompt_tokens": 51460,
+  "completion_tokens": 14976,
+  "posts_tagged": 597,
+  "cost_usd": 0.03533,
+  "cost_per_1000_posts_usd": 0.0592,
   "model": "gemini-3.1-flash-lite"
  }
 }

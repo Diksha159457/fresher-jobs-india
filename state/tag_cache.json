@@ -3406,5 +3406,179 @@
   "city": "Bengaluru",
   "by": "llm",
   "model": "gemini-3.1-flash-lite"
+ },
+ "d62a5029943bde8a": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "8fe117ea075fb8cf": {
+  "role": "Finance & Accounting",
+  "city": "India",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "bba89e2f7ffe104c": {
+  "role": "Sales & Business Development",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "b9e8ecef3f8a01b3": {
+  "role": "Sales & Business Development",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3cd4a52ad51fa1a2": {
+  "role": "Sales & Business Development",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "87f594249d09fbbc": {
+  "role": "Operations & Customer Support",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c2bf6dca4123f8ea": {
+  "role": "QA & Testing",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7c287c478b6c7b77": {
+  "role": "Software Engineering",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "4a111191bfcdf82b": {
+  "role": "DevOps, Cloud & IT",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "8e64b71bfafa4680": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "56039dd9f4a966ac": {
+  "role": "QA & Testing",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "5aebfc931b68d638": {
+  "role": "Software Engineering",
+  "city": "Gurugram",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "dcd6895fc5b90379": {
+  "role": "QA & Testing",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "dbfeae64da75f177": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "d18f37c83063271a": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "ebb3828ea27b68a3": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "48df71a70dca01e0": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "4ebc7a8ab52abccf": {
+  "role": "Finance & Accounting",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3fe213cd75369961": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "1ba489ba50a4fc90": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "bbca7e85bff61867": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "2d38974039c96b2e": {
+  "role": "Operations & Customer Support",
+  "city": "Gurugram",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "9f0dcdf630da3e5f": {
+  "role": "Sales & Business Development",
+  "city": "Chennai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "6b45eb8a39d07069": {
+  "role": "Marketing & Content",
+  "city": "Ahmednagar",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "6f6c9a97e6dbff7b": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "b83c24c31f6b927d": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "95a2fec134abab18": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "d82040e92bb020a8": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "357f438a5b2cff53": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
  }
 }
