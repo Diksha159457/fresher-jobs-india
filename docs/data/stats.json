@@ -1,29 +1,29 @@
 {
- "run_at": "2026-11-23T11:06:30+00:00",
+ "run_at": "2026-11-24T12:51:11+00:00",
  "first_run": false,
  "raw_by_source": {
-  "internshala": 425,
-  "greenhouse": 14,
-  "lever": 14,
+  "internshala": 422,
+  "greenhouse": 13,
+  "lever": 15,
   "ashby": 2
  },
  "source_health": {
   "internshala": {
-   "posts": 425,
+   "posts": 422,
    "endpoints_ok": 9,
    "endpoints_failed": 0,
    "failed": {},
    "status": "ok"
   },
   "greenhouse": {
-   "posts": 14,
+   "posts": 13,
    "endpoints_ok": 28,
    "endpoints_failed": 0,
    "failed": {},
    "status": "ok"
   },
   "lever": {
-   "posts": 14,
+   "posts": 15,
    "endpoints_ok": 8,
    "endpoints_failed": 1,
    "failed": {
@@ -42,29 +42,17 @@
   }
  },
  "dedupe": {
-  "input": 455,
-  "dup_same_id": 24,
-  "dup_exact_key": 4,
+  "input": 452,
+  "dup_same_id": 20,
+  "dup_exact_key": 1,
   "dup_fuzzy": 1,
-  "output": 426,
-  "removed": 29,
+  "output": 430,
+  "removed": 22,
   "examples": {
    "exact_key": [
     {
-     "kept": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)",
-     "dropped": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)"
-    },
-    {
-     "kept": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)",
-     "dropped": "Customer Acquisition Executive | Wehire Talent Solutions | Mumbai (internshala)"
-    },
-    {
-     "kept": "Social Media Manager | Trading Fox Private Limited | Jaipur (internshala)",
-     "dropped": "Social Media Manager | Trading Fox Private Limited | Jaipur (internshala)"
-    },
-    {
-     "kept": "Software Engineer (CPD) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)",
-     "dropped": "Software Engineer - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)"
+     "kept": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)",
+     "dropped": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)"
     }
    ],
    "fuzzy": [
@@ -76,132 +64,132 @@
    ]
   }
  },
- "live_posts": 426,
- "new_today": 119,
+ "live_posts": 430,
+ "new_today": 165,
  "by_role": [
   [
-   "Sales & Business Development",
-   94
-  ],
-  [
    "Software Engineering",
-   88
+   106
   ],
   [
    "Marketing & Content",
-   76
+   71
+  ],
+  [
+   "Sales & Business Development",
+   70
   ],
   [
    "Operations & Customer Support",
-   53
+   48
   ],
   [
    "Data Science & AI/ML",
-   38
+   47
   ],
   [
-   "Finance & Accounting",
+   "Other",
    20
   ],
   [
-   "DevOps, Cloud & IT",
-   16
+   "Finance & Accounting",
+   18
   ],
   [
-   "HR & Recruiting",
-   12
+   "DevOps, Cloud & IT",
+   15
   ],
   [
    "Product & Design",
+   13
+  ],
+  [
+   "HR & Recruiting",
    11
   ],
   [
    "QA & Testing",
-   10
+   8
   ],
   [
    "Core Engineering",
-   5
-  ],
-  [
-   "Other",
    3
   ]
  ],
  "by_city": [
   [
    "Remote",
-   134
+   142
   ],
   [
    "Mumbai",
-   60
+   51
   ],
   [
    "Bengaluru",
-   41
-  ],
-  [
-   "Jaipur",
-   33
+   50
   ],
   [
    "Multiple",
-   25
+   37
   ],
   [
-   "Pune",
-   19
+   "Jaipur",
+   24
   ],
   [
    "Delhi",
-   18
+   19
+  ],
+  [
+   "Noida",
+   16
+  ],
+  [
+   "Pune",
+   14
   ],
   [
    "Hyderabad",
    12
   ],
   [
-   "Noida",
-   12
+   "Chennai",
+   9
   ],
   [
-   "Chennai",
-   11
+   "Gurugram",
+   7
   ],
   [
    "Ahmedabad",
-   9
+   6
   ],
   [
    "Bhopal",
    6
   ],
   [
-   "Gurugram",
+   "Indore",
    5
   ],
   [
-   "Lucknow",
-   4
-  ],
-  [
-   "Indore",
-   4
+   "Mohali",
+   3
   ]
  ],
  "llm": {
   "model": "gemini-3.1-flash-lite",
-  "requests": 5,
-  "posts_tagged": 91,
-  "prompt_tokens": 7924,
-  "completion_tokens": 2296,
+  "requests": 0,
+  "posts_tagged": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
   "price_per_m_in_out_usd": [
    0.25,
    1.5
   ],
-  "cost_usd": 0.005425,
-  "cost_per_1000_posts_usd": 0.0596
+  "cost_usd": 0.0,
+  "cost_per_1000_posts_usd": null
  },
  "llm_totals": {
   "prompt_tokens": 59384,
