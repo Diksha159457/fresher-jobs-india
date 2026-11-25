@@ -1,8 +1,8 @@
 {
- "prompt_tokens": 59384,
- "completion_tokens": 17272,
- "posts_tagged": 688,
- "cost_usd": 0.040755,
- "cost_per_1000_posts_usd": 0.0592,
+ "prompt_tokens": 76193,
+ "completion_tokens": 22056,
+ "posts_tagged": 882,
+ "cost_usd": 0.052133,
+ "cost_per_1000_posts_usd": 0.0591,
  "model": "gemini-3.1-flash-lite"
 }

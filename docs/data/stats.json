@@ -1,22 +1,22 @@
 {
- "run_at": "2026-11-24T12:51:11+00:00",
+ "run_at": "2026-11-25T11:38:10+00:00",
  "first_run": false,
  "raw_by_source": {
-  "internshala": 422,
-  "greenhouse": 13,
+  "internshala": 424,
+  "greenhouse": 12,
   "lever": 15,
   "ashby": 2
  },
  "source_health": {
   "internshala": {
-   "posts": 422,
+   "posts": 424,
    "endpoints_ok": 9,
    "endpoints_failed": 0,
    "failed": {},
    "status": "ok"
   },
   "greenhouse": {
-   "posts": 13,
+   "posts": 12,
    "endpoints_ok": 28,
    "endpoints_failed": 0,
    "failed": {},
@@ -42,17 +42,25 @@
   }
  },
  "dedupe": {
-  "input": 452,
-  "dup_same_id": 20,
-  "dup_exact_key": 1,
+  "input": 453,
+  "dup_same_id": 25,
+  "dup_exact_key": 3,
   "dup_fuzzy": 1,
-  "output": 430,
-  "removed": 22,
+  "output": 424,
+  "removed": 29,
   "examples": {
    "exact_key": [
     {
+     "kept": "Business Development Executive (Stock Market Sales) | Trade Brains | Bangalore (internshala)",
+     "dropped": "Business Development Executive (sales) | Trade Brains | Bangalore (internshala)"
+    },
+    {
      "kept": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)",
      "dropped": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)"
+    },
+    {
+     "kept": "Business Analyst (Post Sales) | ViralChilly | Jaipur (internshala)",
+     "dropped": "Business Analyst | ViralChilly | Jaipur (internshala)"
     }
    ],
    "fuzzy": [
@@ -64,102 +72,98 @@
    ]
   }
  },
- "live_posts": 430,
- "new_today": 165,
+ "live_posts": 424,
+ "new_today": 158,
  "by_role": [
   [
+   "Sales & Business Development",
+   100
+  ],
+  [
    "Software Engineering",
-   106
+   90
   ],
   [
    "Marketing & Content",
-   71
-  ],
-  [
-   "Sales & Business Development",
-   70
+   73
   ],
   [
    "Operations & Customer Support",
-   48
+   46
   ],
   [
    "Data Science & AI/ML",
-   47
-  ],
-  [
-   "Other",
-   20
+   39
   ],
   [
    "Finance & Accounting",
-   18
-  ],
-  [
-   "DevOps, Cloud & IT",
-   15
-  ],
-  [
-   "Product & Design",
-   13
+   17
   ],
   [
    "HR & Recruiting",
-   11
+   14
   ],
   [
-   "QA & Testing",
+   "DevOps, Cloud & IT",
+   14
+  ],
+  [
+   "Product & Design",
+   10
+  ],
+  [
+   "Other",
    8
   ],
   [
    "Core Engineering",
-   3
+   7
+  ],
+  [
+   "QA & Testing",
+   6
   ]
  ],
  "by_city": [
   [
    "Remote",
-   142
-  ],
-  [
-   "Mumbai",
-   51
+   133
   ],
   [
    "Bengaluru",
-   50
+   54
+  ],
+  [
+   "Mumbai",
+   52
   ],
   [
    "Multiple",
-   37
+   28
   ],
   [
    "Jaipur",
-   24
+   27
   ],
   [
    "Delhi",
-   19
-  ],
-  [
-   "Noida",
-   16
+   24
   ],
   [
    "Pune",
-   14
+   17
+  ],
+  [
+   "Gurugram",
+   13
+  ],
+  [
+   "Noida",
+   12
   ],
   [
    "Hyderabad",
    12
-  ],
-  [
-   "Chennai",
-   9
-  ],
-  [
-   "Gurugram",
-   7
   ],
   [
    "Ahmedabad",
@@ -170,33 +174,37 @@
    6
   ],
   [
-   "Indore",
+   "Mohali",
    5
   ],
   [
-   "Mohali",
-   3
+   "Chennai",
+   5
+  ],
+  [
+   "Indore",
+   5
   ]
  ],
  "llm": {
   "model": "gemini-3.1-flash-lite",
-  "requests": 0,
-  "posts_tagged": 0,
-  "prompt_tokens": 0,
-  "completion_tokens": 0,
+  "requests": 10,
+  "posts_tagged": 194,
+  "prompt_tokens": 16809,
+  "completion_tokens": 4784,
   "price_per_m_in_out_usd": [
    0.25,
    1.5
   ],
-  "cost_usd": 0.0,
-  "cost_per_1000_posts_usd": null
+  "cost_usd": 0.011378,
+  "cost_per_1000_posts_usd": 0.0587
  },
  "llm_totals": {
-  "prompt_tokens": 59384,
-  "completion_tokens": 17272,
-  "posts_tagged": 688,
-  "cost_usd": 0.040755,
-  "cost_per_1000_posts_usd": 0.0592,
+  "prompt_tokens": 76193,
+  "completion_tokens": 22056,
+  "posts_tagged": 882,
+  "cost_usd": 0.052133,
+  "cost_per_1000_posts_usd": 0.0591,
   "model": "gemini-3.1-flash-lite"
  }
 }
