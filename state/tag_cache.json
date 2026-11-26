@@ -5290,5 +5290,671 @@
   "city": "Noida",
   "by": "llm",
   "model": "gemini-3.1-flash-lite"
+ },
+ "a29c6e0e191ec95f": {
+  "role": "Operations & Customer Support",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "fe7d505e3144a817": {
+  "role": "Operations & Customer Support",
+  "city": "Kolkata",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "38bf96187dd3b355": {
+  "role": "Sales & Business Development",
+  "city": "Jaipur",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "da26e8797800dbbb": {
+  "role": "Sales & Business Development",
+  "city": "Thiruvananthapuram",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "72bbd3f20ab94002": {
+  "role": "Operations & Customer Support",
+  "city": "Chennai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7fb89ceababffd89": {
+  "role": "Operations & Customer Support",
+  "city": "Chennai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7f513bebb91a5502": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7b261b9568c544cd": {
+  "role": "Sales & Business Development",
+  "city": "Guwahati",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "4ddc36f06f4abc4a": {
+  "role": "Sales & Business Development",
+  "city": "Indore",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f31b30b4af8bb92d": {
+  "role": "Marketing & Content",
+  "city": "Indore",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "adfeced92f342268": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7ab22f0560ca5aac": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "4aaa997e83de2372": {
+  "role": "Sales & Business Development",
+  "city": "Hyderabad",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "4142dec800443787": {
+  "role": "Finance & Accounting",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "0b77aec70c1f36c3": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "19cbfda399053aca": {
+  "role": "Finance & Accounting",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c86ea470d311ce25": {
+  "role": "Sales & Business Development",
+  "city": "Guwahati",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "23689ae2d8cef92c": {
+  "role": "Sales & Business Development",
+  "city": "Gurugram",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a394488a970832bd": {
+  "role": "Sales & Business Development",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c952078f2cda40dc": {
+  "role": "Sales & Business Development",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "1f54dee2522d80b5": {
+  "role": "Sales & Business Development",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "8af4cd03ce19617c": {
+  "role": "Marketing & Content",
+  "city": "Hyderabad",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "8847679f64a398a8": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "6a235656736028fd": {
+  "role": "HR & Recruiting",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "ac649e5347b83b5f": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "241364eb7b415474": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a59a9d17e525bd3b": {
+  "role": "HR & Recruiting",
+  "city": "Panchkula",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "25ba10aac1078c9e": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "e739f80ec853807d": {
+  "role": "Data Science & AI/ML",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "5161bea047b547a7": {
+  "role": "Sales & Business Development",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "01a2e10a1dcd5602": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "d950d468a23e6e2b": {
+  "role": "Operations & Customer Support",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "6c29554741312e8e": {
+  "role": "Operations & Customer Support",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "ffb484fc242ceb1d": {
+  "role": "QA & Testing",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "2d591d39fbea6406": {
+  "role": "Software Engineering",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "afdb449e6b5d4ff5": {
+  "role": "Software Engineering",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "e8caa993a2f7ab48": {
+  "role": "Core Engineering",
+  "city": "Hyderabad",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f0093340e39be61e": {
+  "role": "Software Engineering",
+  "city": "Chennai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f38c0de90dcb3f54": {
+  "role": "Software Engineering",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "9cfd1a9d6a5924cb": {
+  "role": "Sales & Business Development",
+  "city": "Mangalore",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "84dfc35d0c81b136": {
+  "role": "DevOps, Cloud & IT",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3696c4dc664379ef": {
+  "role": "Core Engineering",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "ac2b775f552fe58a": {
+  "role": "Core Engineering",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "8f5c254416941344": {
+  "role": "QA & Testing",
+  "city": "Chennai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "534aa92ecc6e981b": {
+  "role": "Software Engineering",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "dda587a0b0346a1d": {
+  "role": "Software Engineering",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7100a5c67b97ee92": {
+  "role": "Operations & Customer Support",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "da79123a72ccf9db": {
+  "role": "Software Engineering",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c61f3678b1699ee9": {
+  "role": "Software Engineering",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3d85012bae085a33": {
+  "role": "QA & Testing",
+  "city": "Noida",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3b462c33e8563359": {
+  "role": "Software Engineering",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "701678b97af10c80": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "ce3b4f82d2b53007": {
+  "role": "Software Engineering",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "d7dc3fcbf9b38ea7": {
+  "role": "Software Engineering",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c2b05e88d0cce5a0": {
+  "role": "Software Engineering",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c249268cc1ab971d": {
+  "role": "Software Engineering",
+  "city": "Noida",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "5fb9f3701632eb44": {
+  "role": "Software Engineering",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "708c0c8134a0132c": {
+  "role": "Software Engineering",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7810d9d547815ac2": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "6e93e198dafa52dc": {
+  "role": "Data Science & AI/ML",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f8de146d88da4145": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "2ff7427aeaf1dc6a": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "66f3d764d7d266b9": {
+  "role": "Other",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "24c9b1f8c3a838b8": {
+  "role": "Data Science & AI/ML",
+  "city": "Multiple",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "183d5b140042e7f1": {
+  "role": "Operations & Customer Support",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "16c6ff12765fd1a1": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f6cc40e755771a7f": {
+  "role": "Marketing & Content",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "9ca40f2030a06c53": {
+  "role": "Data Science & AI/ML",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "39b3d37153264589": {
+  "role": "Data Science & AI/ML",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "2b8e464e3fdd8bc3": {
+  "role": "Marketing & Content",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "52e7cd23f036c06e": {
+  "role": "Marketing & Content",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "316578bcd8b2dc05": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "41e2a9baf1802866": {
+  "role": "Marketing & Content",
+  "city": "Kolkata",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3501c1aea70f01c4": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "69db70602c6f9444": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a9618534ba2ad1d8": {
+  "role": "Sales & Business Development",
+  "city": "Jaipur",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7a355611d52b5b82": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "bbc68a1f4d03bb96": {
+  "role": "Sales & Business Development",
+  "city": "Ahmedabad",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "cb529de71899b3e5": {
+  "role": "HR & Recruiting",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "92ec6eca253c500c": {
+  "role": "Operations & Customer Support",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "4014dc5c8cb4e97b": {
+  "role": "Marketing & Content",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "961e39b57b5e6716": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "9e2aea5ca9917564": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a245517569391a19": {
+  "role": "Sales & Business Development",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a1842d7c71389da5": {
+  "role": "Marketing & Content",
+  "city": "Noida",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c0a7037a04f088ad": {
+  "role": "Sales & Business Development",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "31cfb372f15d9c56": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a440fc666a3dd884": {
+  "role": "Marketing & Content",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "15fb6c5065826b6f": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "d66ec614c4e3900a": {
+  "role": "Sales & Business Development",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "c93d4b18fef73b73": {
+  "role": "Sales & Business Development",
+  "city": "Indore",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f243a22fbf08b1f5": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "9e0fe3c3c02867d9": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "21b12be22455df47": {
+  "role": "Sales & Business Development",
+  "city": "Jaipur",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "3d3ee48fa0ee7ba9": {
+  "role": "Sales & Business Development",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "b07fedf77d480493": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "656d8e5413aa9811": {
+  "role": "Marketing & Content",
+  "city": "Mumbai",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7425bbda2ffd492c": {
+  "role": "Operations & Customer Support",
+  "city": "Ahmedabad",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "82779e1752a7da5b": {
+  "role": "Marketing & Content",
+  "city": "Pune",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a37240fbaf5b1ced": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "636533ec92e1331b": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "51bc2c1e68ba0e6e": {
+  "role": "Marketing & Content",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "e5d049984d3dd067": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "7b012c04c68356c8": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "8a1a060ff1b05ffc": {
+  "role": "Marketing & Content",
+  "city": "Remote",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "d9258b8417a12009": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "2d15f58a782832b5": {
+  "role": "Marketing & Content",
+  "city": "Mohali",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "f30b55350695d456": {
+  "role": "Marketing & Content",
+  "city": "Delhi",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "5ecc60bf17141d89": {
+  "role": "Sales & Business Development",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "11b6c7a28d7b9bc6": {
+  "role": "Software Engineering",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
+ },
+ "a4c4187ef29feef1": {
+  "role": "Software Engineering",
+  "city": "Bengaluru",
+  "by": "llm",
+  "model": "gemini-3.1-flash-lite"
  }
 }

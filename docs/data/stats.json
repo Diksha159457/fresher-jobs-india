@@ -1,29 +1,29 @@
 {
- "run_at": "2026-11-25T11:38:10+00:00",
+ "run_at": "2026-11-26T11:22:59+00:00",
  "first_run": false,
  "raw_by_source": {
-  "internshala": 424,
-  "greenhouse": 12,
-  "lever": 15,
+  "internshala": 425,
+  "greenhouse": 11,
+  "lever": 17,
   "ashby": 2
  },
  "source_health": {
   "internshala": {
-   "posts": 424,
+   "posts": 425,
    "endpoints_ok": 9,
    "endpoints_failed": 0,
    "failed": {},
    "status": "ok"
   },
   "greenhouse": {
-   "posts": 12,
+   "posts": 11,
    "endpoints_ok": 28,
    "endpoints_failed": 0,
    "failed": {},
    "status": "ok"
   },
   "lever": {
-   "posts": 15,
+   "posts": 17,
    "endpoints_ok": 8,
    "endpoints_failed": 1,
    "failed": {
@@ -42,17 +42,17 @@
   }
  },
  "dedupe": {
-  "input": 453,
-  "dup_same_id": 25,
-  "dup_exact_key": 3,
-  "dup_fuzzy": 1,
+  "input": 455,
+  "dup_same_id": 24,
+  "dup_exact_key": 5,
+  "dup_fuzzy": 2,
   "output": 424,
-  "removed": 29,
+  "removed": 31,
   "examples": {
    "exact_key": [
     {
-     "kept": "Business Development Executive (Stock Market Sales) | Trade Brains | Bangalore (internshala)",
-     "dropped": "Business Development Executive (sales) | Trade Brains | Bangalore (internshala)"
+     "kept": "Business Development Executive (sales) | Trade Brains | Bangalore (internshala)",
+     "dropped": "Business Development Executive (Stock Market Sales) | Trade Brains | Bangalore (internshala)"
     },
     {
      "kept": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)",
@@ -61,23 +61,36 @@
     {
      "kept": "Business Analyst (Post Sales) | ViralChilly | Jaipur (internshala)",
      "dropped": "Business Analyst | ViralChilly | Jaipur (internshala)"
+    },
+    {
+     "kept": "Business Analyst | ViralChilly | Jaipur (internshala)",
+     "dropped": "Business Analyst (Pre-sales) | ViralChilly | Jaipur (internshala)"
+    },
+    {
+     "kept": "Software Engineer (CPD) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)",
+     "dropped": "Software Engineer (UI) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)"
     }
    ],
    "fuzzy": [
     {
-     "kept": "Marketing Excecutive | Sherlocks Life | Kolkata (internshala)",
-     "dropped": "Marketing Executive | Sherlocks Life | Kolkata (internshala)",
-     "similarity": 97.4
+     "kept": "CS Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
+     "dropped": "CA Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
+     "similarity": 96.3
+    },
+    {
+     "kept": "CS Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
+     "dropped": "CMA Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
+     "similarity": 94.5
     }
    ]
   }
  },
  "live_posts": 424,
- "new_today": 158,
+ "new_today": 149,
  "by_role": [
   [
    "Sales & Business Development",
-   100
+   112
   ],
   [
    "Software Engineering",
@@ -85,15 +98,15 @@
   ],
   [
    "Marketing & Content",
-   73
+   66
   ],
   [
    "Operations & Customer Support",
-   46
+   42
   ],
   [
    "Data Science & AI/ML",
-   39
+   36
   ],
   [
    "Finance & Accounting",
@@ -101,44 +114,48 @@
   ],
   [
    "HR & Recruiting",
-   14
+   16
   ],
   [
    "DevOps, Cloud & IT",
-   14
+   11
   ],
   [
    "Product & Design",
    10
   ],
   [
-   "Other",
-   8
-  ],
-  [
    "Core Engineering",
-   7
+   9
   ],
   [
    "QA & Testing",
-   6
+   8
+  ],
+  [
+   "Other",
+   7
   ]
  ],
  "by_city": [
   [
    "Remote",
-   133
-  ],
-  [
-   "Bengaluru",
-   54
+   115
   ],
   [
    "Mumbai",
+   59
+  ],
+  [
+   "Bengaluru",
    52
   ],
   [
    "Multiple",
+   30
+  ],
+  [
+   "Delhi",
    28
   ],
   [
@@ -146,16 +163,8 @@
    27
   ],
   [
-   "Delhi",
-   24
-  ],
-  [
    "Pune",
-   17
-  ],
-  [
-   "Gurugram",
-   13
+   23
   ],
   [
    "Noida",
@@ -163,7 +172,19 @@
   ],
   [
    "Hyderabad",
-   12
+   9
+  ],
+  [
+   "Gurugram",
+   9
+  ],
+  [
+   "Indore",
+   8
+  ],
+  [
+   "Chennai",
+   7
   ],
   [
    "Ahmedabad",
@@ -175,35 +196,27 @@
   ],
   [
    "Mohali",
-   5
-  ],
-  [
-   "Chennai",
-   5
-  ],
-  [
-   "Indore",
-   5
+   4
   ]
  ],
  "llm": {
   "model": "gemini-3.1-flash-lite",
-  "requests": 10,
-  "posts_tagged": 194,
-  "prompt_tokens": 16809,
-  "completion_tokens": 4784,
+  "requests": 6,
+  "posts_tagged": 111,
+  "prompt_tokens": 9562,
+  "completion_tokens": 2780,
   "price_per_m_in_out_usd": [
    0.25,
    1.5
   ],
-  "cost_usd": 0.011378,
-  "cost_per_1000_posts_usd": 0.0587
+  "cost_usd": 0.006561,
+  "cost_per_1000_posts_usd": 0.0591
  },
  "llm_totals": {
-  "prompt_tokens": 76193,
-  "completion_tokens": 22056,
-  "posts_tagged": 882,
-  "cost_usd": 0.052133,
+  "prompt_tokens": 85755,
+  "completion_tokens": 24836,
+  "posts_tagged": 993,
+  "cost_usd": 0.058693,
   "cost_per_1000_posts_usd": 0.0591,
   "model": "gemini-3.1-flash-lite"
  }
