@@ -1,22 +1,22 @@
 {
- "run_at": "2026-11-26T11:22:59+00:00",
+ "run_at": "2026-11-27T11:16:11+00:00",
  "first_run": false,
  "raw_by_source": {
-  "internshala": 425,
-  "greenhouse": 11,
+  "internshala": 420,
+  "greenhouse": 12,
   "lever": 17,
   "ashby": 2
  },
  "source_health": {
   "internshala": {
-   "posts": 425,
+   "posts": 420,
    "endpoints_ok": 9,
    "endpoints_failed": 0,
    "failed": {},
    "status": "ok"
   },
   "greenhouse": {
-   "posts": 11,
+   "posts": 12,
    "endpoints_ok": 28,
    "endpoints_failed": 0,
    "failed": {},
@@ -42,29 +42,25 @@
   }
  },
  "dedupe": {
-  "input": 455,
+  "input": 451,
   "dup_same_id": 24,
-  "dup_exact_key": 5,
+  "dup_exact_key": 4,
   "dup_fuzzy": 2,
-  "output": 424,
-  "removed": 31,
+  "output": 421,
+  "removed": 30,
   "examples": {
    "exact_key": [
-    {
-     "kept": "Business Development Executive (sales) | Trade Brains | Bangalore (internshala)",
-     "dropped": "Business Development Executive (Stock Market Sales) | Trade Brains | Bangalore (internshala)"
-    },
     {
      "kept": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)",
      "dropped": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)"
     },
     {
      "kept": "Business Analyst (Post Sales) | ViralChilly | Jaipur (internshala)",
-     "dropped": "Business Analyst | ViralChilly | Jaipur (internshala)"
+     "dropped": "Business Analyst (Pre-sales) | ViralChilly | Jaipur (internshala)"
     },
     {
-     "kept": "Business Analyst | ViralChilly | Jaipur (internshala)",
-     "dropped": "Business Analyst (Pre-sales) | ViralChilly | Jaipur (internshala)"
+     "kept": "Business Analyst (Post Sales) | ViralChilly | Jaipur (internshala)",
+     "dropped": "Business Analyst | ViralChilly | Jaipur (internshala)"
     },
     {
      "kept": "Software Engineer (CPD) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)",
@@ -73,63 +69,63 @@
    ],
    "fuzzy": [
     {
-     "kept": "CS Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
-     "dropped": "CA Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
+     "kept": "CA Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
+     "dropped": "CS Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
      "similarity": 96.3
     },
     {
-     "kept": "CS Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
-     "dropped": "CMA Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
-     "similarity": 94.5
+     "kept": "Intern - Talent Acquisition | Paytm | Gurugram, Haryana, Noida, Uttar Pradesh (lever)",
+     "dropped": "Talent Acquisition Internship | Paytm | Gurugram, Haryana (lever)",
+     "similarity": 100.0
     }
    ]
   }
  },
- "live_posts": 424,
- "new_today": 149,
+ "live_posts": 421,
+ "new_today": 146,
  "by_role": [
   [
    "Sales & Business Development",
-   112
+   100
   ],
   [
    "Software Engineering",
-   90
+   89
   ],
   [
    "Marketing & Content",
    66
   ],
   [
+   "Data Science & AI/ML",
+   48
+  ],
+  [
    "Operations & Customer Support",
    42
-  ],
-  [
-   "Data Science & AI/ML",
-   36
-  ],
-  [
-   "Finance & Accounting",
-   17
   ],
   [
    "HR & Recruiting",
    16
   ],
   [
-   "DevOps, Cloud & IT",
-   11
+   "Finance & Accounting",
+   14
   ],
   [
    "Product & Design",
-   10
-  ],
-  [
-   "Core Engineering",
-   9
+   12
   ],
   [
    "QA & Testing",
+   10
+  ],
+  [
+   "DevOps, Cloud & IT",
+   9
+  ],
+  [
+   "Core Engineering",
    8
   ],
   [
@@ -140,19 +136,19 @@
  "by_city": [
   [
    "Remote",
-   115
+   124
   ],
   [
    "Mumbai",
-   59
+   62
   ],
   [
    "Bengaluru",
-   52
+   42
   ],
   [
    "Multiple",
-   30
+   31
   ],
   [
    "Delhi",
@@ -160,30 +156,26 @@
   ],
   [
    "Jaipur",
-   27
+   25
   ],
   [
    "Pune",
-   23
+   18
   ],
   [
    "Noida",
-   12
-  ],
-  [
-   "Hyderabad",
-   9
+   15
   ],
   [
    "Gurugram",
    9
   ],
   [
-   "Indore",
+   "Chennai",
    8
   ],
   [
-   "Chennai",
+   "Indore",
    7
   ],
   [
@@ -195,29 +187,33 @@
    6
   ],
   [
-   "Mohali",
+   "Hyderabad",
+   5
+  ],
+  [
+   "Kolkata",
    4
   ]
  ],
  "llm": {
   "model": "gemini-3.1-flash-lite",
   "requests": 6,
-  "posts_tagged": 111,
-  "prompt_tokens": 9562,
-  "completion_tokens": 2780,
+  "posts_tagged": 109,
+  "prompt_tokens": 9706,
+  "completion_tokens": 3124,
   "price_per_m_in_out_usd": [
    0.25,
    1.5
   ],
-  "cost_usd": 0.006561,
-  "cost_per_1000_posts_usd": 0.0591
+  "cost_usd": 0.007112,
+  "cost_per_1000_posts_usd": 0.0653
  },
  "llm_totals": {
-  "prompt_tokens": 85755,
-  "completion_tokens": 24836,
-  "posts_tagged": 993,
-  "cost_usd": 0.058693,
-  "cost_per_1000_posts_usd": 0.0591,
+  "prompt_tokens": 95461,
+  "completion_tokens": 27960,
+  "posts_tagged": 1102,
+  "cost_usd": 0.065806,
+  "cost_per_1000_posts_usd": 0.0597,
   "model": "gemini-3.1-flash-lite"
  }
 }
