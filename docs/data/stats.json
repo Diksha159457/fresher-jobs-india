@@ -1,15 +1,15 @@
 {
- "run_at": "2026-11-27T11:16:11+00:00",
+ "run_at": "2026-11-28T10:46:53+00:00",
  "first_run": false,
  "raw_by_source": {
-  "internshala": 420,
+  "internshala": 427,
   "greenhouse": 12,
   "lever": 17,
-  "ashby": 2
+  "ashby": 1
  },
  "source_health": {
   "internshala": {
-   "posts": 420,
+   "posts": 427,
    "endpoints_ok": 9,
    "endpoints_failed": 0,
    "failed": {},
@@ -32,7 +32,7 @@
    "status": "ok"
   },
   "ashby": {
-   "posts": 2,
+   "posts": 1,
    "endpoints_ok": 3,
    "endpoints_failed": 1,
    "failed": {
@@ -42,17 +42,21 @@
   }
  },
  "dedupe": {
-  "input": 451,
-  "dup_same_id": 24,
-  "dup_exact_key": 4,
-  "dup_fuzzy": 2,
-  "output": 421,
-  "removed": 30,
+  "input": 457,
+  "dup_same_id": 28,
+  "dup_exact_key": 6,
+  "dup_fuzzy": 1,
+  "output": 422,
+  "removed": 35,
   "examples": {
    "exact_key": [
     {
      "kept": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)",
      "dropped": "Customer Service Associate | Wehire Talent Solutions | Mumbai (internshala)"
+    },
+    {
+     "kept": "Customer Service Executive | Wehire Talent Solutions | Mumbai (internshala)",
+     "dropped": "Customer Service Executive | Wehire Talent Solutions | Mumbai (internshala)"
     },
     {
      "kept": "Business Analyst (Post Sales) | ViralChilly | Jaipur (internshala)",
@@ -63,16 +67,15 @@
      "dropped": "Business Analyst | ViralChilly | Jaipur (internshala)"
     },
     {
+     "kept": "Finance Dashboard And BI | Fin Maverick | Work from home (internshala)",
+     "dropped": "Finance Dashboard And BI | Fin Maverick | Work from home (internshala)"
+    },
+    {
      "kept": "Software Engineer (CPD) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)",
      "dropped": "Software Engineer (UI) - Winter Intern | Rubrik Job Board | Bangalore (greenhouse)"
     }
    ],
    "fuzzy": [
-    {
-     "kept": "CA Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
-     "dropped": "CS Academic Quality Analyst | Verve Advisory Private Limited | Work from home (internshala)",
-     "similarity": 96.3
-    },
     {
      "kept": "Intern - Talent Acquisition | Paytm | Gurugram, Haryana, Noida, Uttar Pradesh (lever)",
      "dropped": "Talent Acquisition Internship | Paytm | Gurugram, Haryana (lever)",
@@ -81,43 +84,39 @@
    ]
   }
  },
- "live_posts": 421,
- "new_today": 146,
+ "live_posts": 422,
+ "new_today": 81,
  "by_role": [
   [
    "Sales & Business Development",
-   100
+   103
   ],
   [
    "Software Engineering",
-   89
+   90
   ],
   [
    "Marketing & Content",
-   66
-  ],
-  [
-   "Data Science & AI/ML",
-   48
+   67
   ],
   [
    "Operations & Customer Support",
-   42
+   55
   ],
   [
-   "HR & Recruiting",
-   16
+   "Data Science & AI/ML",
+   39
   ],
   [
    "Finance & Accounting",
-   14
+   15
+  ],
+  [
+   "HR & Recruiting",
+   15
   ],
   [
    "Product & Design",
-   12
-  ],
-  [
-   "QA & Testing",
    10
   ],
   [
@@ -125,38 +124,42 @@
    9
   ],
   [
+   "QA & Testing",
+   8
+  ],
+  [
    "Core Engineering",
    8
   ],
   [
    "Other",
-   7
+   3
   ]
  ],
  "by_city": [
   [
    "Remote",
-   124
+   108
   ],
   [
    "Mumbai",
-   62
+   68
   ],
   [
    "Bengaluru",
-   42
+   41
   ],
   [
    "Multiple",
-   31
-  ],
-  [
-   "Delhi",
-   28
+   32
   ],
   [
    "Jaipur",
-   25
+   28
+  ],
+  [
+   "Delhi",
+   22
   ],
   [
    "Pune",
@@ -164,10 +167,14 @@
   ],
   [
    "Noida",
-   15
+   14
   ],
   [
    "Gurugram",
+   11
+  ],
+  [
+   "Ahmedabad",
    9
   ],
   [
@@ -176,44 +183,40 @@
   ],
   [
    "Indore",
-   7
+   8
   ],
   [
-   "Ahmedabad",
-   6
+   "Hyderabad",
+   7
   ],
   [
    "Bhopal",
    6
   ],
   [
-   "Hyderabad",
+   "Surat",
    5
-  ],
-  [
-   "Kolkata",
-   4
   ]
  ],
  "llm": {
   "model": "gemini-3.1-flash-lite",
-  "requests": 6,
-  "posts_tagged": 109,
-  "prompt_tokens": 9706,
-  "completion_tokens": 3124,
+  "requests": 4,
+  "posts_tagged": 70,
+  "prompt_tokens": 6336,
+  "completion_tokens": 1994,
   "price_per_m_in_out_usd": [
    0.25,
    1.5
   ],
-  "cost_usd": 0.007112,
-  "cost_per_1000_posts_usd": 0.0653
+  "cost_usd": 0.004575,
+  "cost_per_1000_posts_usd": 0.0654
  },
  "llm_totals": {
-  "prompt_tokens": 95461,
-  "completion_tokens": 27960,
-  "posts_tagged": 1102,
-  "cost_usd": 0.065806,
-  "cost_per_1000_posts_usd": 0.0597,
+  "prompt_tokens": 101797,
+  "completion_tokens": 29954,
+  "posts_tagged": 1172,
+  "cost_usd": 0.070381,
+  "cost_per_1000_posts_usd": 0.0601,
   "model": "gemini-3.1-flash-lite"
  }
 }
